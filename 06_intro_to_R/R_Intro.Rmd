@@ -756,6 +756,8 @@ The combined data object `pheno_exp` can also easily be used to plot any particu
 
 ```
 
+### Factor Re-leveling 
+
 The order of our groups doesn't quite make sense. It would be easier to read the graph if it were ordered from positive to negative rather than alphabetically. If we want to reorder factors, we will use the `fct_relevel` function found within the [forcats](https://forcats.tidyverse.org/) package. We will take the `pheno_exp` object and use `mutate` to overwrite the `group` variable with the `fct_relevel` function on the `group` variable. In this instance, we need to write the exact name and order of each factor by hand. We can check that our reorganization worked by checking the `levels`.
 
 ```{r}
@@ -768,6 +770,8 @@ Rerun the boxplots to see the controls show up first.
 ```{r, solution=TRUE}
 
 ```
+
+### MOTRPAC Plot feature
 
 There is also a built-in log fold change plot function in the MotrpacRatTraining6mo package called `plot_feature_logfc`. With this function you can define the assay type, the tissue type, the feature_ID, and whether you want to facet by sex. You can also add labels such as the adjusted p value. Check out more options for this function any time in the help documentation.
 
